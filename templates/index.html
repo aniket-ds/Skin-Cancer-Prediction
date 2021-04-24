@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Skin Cancer Detection</title>
+    <style type="text/css">
+      *{
+        margin:0;
+        padding:0
+       }
+       body{
+  background-image: url(/static/img/image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+       }
+       .container{
+  padding-top: 10px;
+  padding-bottom: 80px;
+       }
+       
+    </style>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/form_upload.css" rel="stylesheet"> 
+  </head>
+
+  <body class="text-center">
+    <div class="container">
+    <div class="py-5">
+      <h2 style="color:white;">MELANOMA SKIN CANCER PREDICTION</h2>
+       <p class="lead" style="color:white;">This web app helps you predict the deadly cancer.</p>
+    </div>
+    <form class="form-upload" method=post enctype=multipart/form-data>
+      <h1 class="h3 mb-3 font-weight-normal" style="color:white">Please upload image</h1>
+      <input type="file" id="image" name="image" class="form-control" required autofocus>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+      <br>
+      {% if image_loc %}
+        <img class="mb-4" src="static/{{image_loc}}" alt="" width="256" height="256">
+        <h3 class="h3 mb-3 font-weight-normal" style="color:white">Prediction: {{prediction}}</h3>
+      {%endif%}
+      <section id="footer">
+        <div class="footer container">
+            <p class="mb-1" style="color:white" >&copy; 2021 ANIKET PHULGIRKAR</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </div>
+      </section>
+    </form>
+  </body>
+</html>
