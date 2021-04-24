@@ -1,2 +1,2 @@
 # Skin-Cancer-Prediction
-Built a web app to detect the deadly skin cancer.
+Built a web app to detect the deadly melanoma skin cancer.
